@@ -1,4 +1,5 @@
 import { Card } from './card.model';
+import { Deck } from './deck';
 
 export enum GamePhase {
   WAITING = 'WAITING',
@@ -7,10 +8,20 @@ export enum GamePhase {
   SHOWDOWN = 'SHOWDOWN',
 }
 
-export interface GameState {
+export interface Player {
   id: string;
   name: string;
   hand: Card[];
   totalPoints: number;
   turnCount: number;
+}
+
+export interface GameInstance {
+  id: string; // Room ID
+  players: Player[];
+  phase: GamePhase;
+  deck: Deck;
+  discardPile: Card[][];
+  activePlayerIndex: number;
+
 }

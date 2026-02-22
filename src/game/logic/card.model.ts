@@ -15,6 +15,10 @@ export class Card {
     return this.rank > 10 ? 10 : this.rank;
   }
 
+  public equals(other: Card): boolean {
+    return this.rank === other.rank && this.suit === other.suit;
+  }
+
   get display(): string {
     const ranks = { 1: 'A', 11: 'J', 12: 'Q', 13: 'K' };
     return `${ranks[this.rank] ?? this.rank} of ${this.suit}`;
