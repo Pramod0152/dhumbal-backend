@@ -23,5 +23,5 @@ export interface GameInstance {
   deck: Deck;
   discardPile: Card[][];
   activePlayerIndex: number;
-
+  currentThrown: Card[];
 }

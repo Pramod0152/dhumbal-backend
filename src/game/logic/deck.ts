@@ -29,8 +29,12 @@ export class Deck {
     return this.cards;
   }
 
-  public draw(): Card | undefined {
-    return this.cards.shift();
+  public draw(): Card {
+    const card = this.cards.pop();
+    if (!card) {
+      throw new Error('No cards to draw');
+    }
+    return card;
   }
 
   get remaining(): number {
