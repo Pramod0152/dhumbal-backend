@@ -3,7 +3,7 @@ import { Card } from './game/logic/card.model';
 import { GameService } from './game/game.service';
 import { HandValidatorService } from './game/logic/hand-validator.service';
 import { Deck } from './game/logic/deck';
-import { Gateway } from './game/game.gateway';
+import { Gateway } from './game/gateway';
 
 @Module({
   imports: [],
