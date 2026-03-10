@@ -39,7 +39,8 @@ export class Gateway {
     client.join(game.id);
     this.emitGameEvent(game.id, EventType.GAME_CREATED, game);
   }
-
+ 
+  // join game
   @SubscribeMessage('game:join')
   handleJoinGame(
     @ConnectedSocket() client: Socket,
